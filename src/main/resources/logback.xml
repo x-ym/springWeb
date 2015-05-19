@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd"> -->
+<!DOCTYPE configuration>
+<configuration scan="true" scanPeriod="10 seconds">  
+    <appender name="ROLLING"   
+        class="ch.qos.logback.core.rolling.RollingFileAppender">  
+        <prudent>true</prudent>  
+        <rollingPolicy   
+            class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+            <fileNamePattern>  
+                log/test-%d{yyyy-MM-dd}.%i.log</fileNamePattern>  
+            <maxHistory>30</maxHistory>  
+            <timeBasedFileNamingAndTriggeringPolicy   
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">  
+                <maxFileSize>10MB</maxFileSize>  
+            </timeBasedFileNamingAndTriggeringPolicy>  
+        </rollingPolicy>  
+        <encoder>  
+            <!-- <pattern>%date [%thread] %level %logger.%class{0}#%method [%file:%line] %msg%n</pattern>   -->
+            <pattern>[%date{HH:mm:ss}] [%file:%line] %level [%thread] %msg%n</pattern>
+        </encoder>  
+    </appender>  
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">  
+        <encoder>  
+            <!-- <pattern>%date [%thread] %level %logger.%class{0}#%method [%file:%line] %msg%n</pattern>   -->
+            <pattern>[%date{HH:mm:ss}] [%file:%line] %level [%thread] %msg%n</pattern>
+        </encoder>  
+    </appender>  
+      
+    <root level="info">  
+        <appender-ref ref="STDOUT" />  
+    </root>  
+      
+    <logger name="test">  
+        <appender-ref ref="ROLLING" />  
+    </logger>  
+</configuration>  
