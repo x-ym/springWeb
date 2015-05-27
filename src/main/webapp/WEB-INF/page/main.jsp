@@ -121,7 +121,7 @@
 			     <div id="main" class="easyui-tabs"  fit="true" border="false" plain="true">
 					    <div title="后台首页" style="padding:10px;">
 					      <!-- <iframe  frameborder="0" style="width:100%;height:100%;" src="http://www.sina.com"></iframe> -->
-					    	dadfasdfd
+					    	欢迎光临
 					    </div>
 			     </div>
 		</div>
