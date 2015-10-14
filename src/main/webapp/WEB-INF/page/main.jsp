@@ -75,7 +75,7 @@
 		<div  region="center" style="height:48px;padding:0;margin:0;"  border="false" >
 		    <a href="../" class="easyui-linkbutton" plain="true" icon="icon-next" target="_blank">网站首页</a>
 		    <a href="#" class="easyui-linkbutton" plain="true" icon="icon-home" onclick="goHome()">后台首页</a>
-		    <a href="login.php?act=off" onclick="if(!confirm('你确定退出吗？')){return false;}" class="easyui-linkbutton" plain="true" icon="icon-undo" >退出系统</a>
+		    <a href="logout.jspx" onclick="if(!confirm('你确定退出吗？')){return false;}" class="easyui-linkbutton" plain="true" icon="icon-undo" >退出系统</a>
 		    <br/>
 		    欢迎使用后台管理系统
 		</div>
