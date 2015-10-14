@@ -13,10 +13,15 @@
 		<logback.version>1.0.13</logback.version>
 	</properties>
 	<dependencies>
-
+		<!-- spring 4 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
@@ -24,7 +29,27 @@
 			<artifactId>spring-security-core</artifactId>
 			<version>3.1.6.RELEASE</version>
 		</dependency>
+		<!-- hiberante 5 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.0.2.Final</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hibernate.common</groupId>
+					<artifactId>hibernate-commons-annotations</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-jta_1.1_spec</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.jboss</groupId>
+					<artifactId>jandex</artifactId>
+				</exclusion>
 
+			</exclusions>
+		</dependency>
 
 		<!-- self4j -->
 		<dependency>
@@ -54,6 +79,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
+			<!-- 必要的jar包 <exclusions>
+				<exclusion>
+					<groupId>org.hamcrest</groupId>
+					<artifactId>hamcrest-core</artifactId>
+				</exclusion>
+			</exclusions> -->
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
